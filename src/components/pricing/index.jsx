@@ -1,25 +1,23 @@
 import React, { Component } from "react";
+import Button from "../utils/Buttons";
 import Zoom from "react-reveal/Zoom";
-
-//Utils
-import Button from "../../components/utils/buttons";
 
 class Pricing extends Component {
   state = {
     prices: [100, 150, 250],
     positions: ["Balcony", "Medium", "Star"],
     desc: [
-      "ipsum dolor sit amet consectetur, adipisicing elit. Minus esse rerum dicta dolore, quos cum.",
-      "ipsum dolor sit amet consectetur, adipisicing elit. Minus esse rerum dicta dolore, quos cum.",
-      "ipsum dolor sit amet consectetur, adipisicing elit. Minus esse rerum dicta dolore, quos cum."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uts",
+      "Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     ],
-    linkto: ["http://sales.b", "http://sales/m", "http://sales/s"],
+    linkto: ["http://sales/b", "http://sales/m", "http://sales/s"],
     delay: [500, 0, 500]
   };
 
   showBoxes = () =>
     this.state.prices.map((box, i) => (
-      <Zoom delay={this.state.delay[i]} key="i">
+      <Zoom delay={this.state.delay[i]} key={i}>
         <div className="pricing_item">
           <div className="pricing_inner_wrapper">
             <div className="pricing_title">
@@ -29,9 +27,9 @@ class Pricing extends Component {
             <div className="pricing_description">{this.state.desc[i]}</div>
             <div className="pricing_buttons">
               <Button
-                text="Purchase Ticket"
+                text="Purchase"
                 bck="#ffa800"
-                color="#fff"
+                color="#ffffff"
                 link={this.state.linkto[i]}
               />
             </div>
@@ -46,8 +44,7 @@ class Pricing extends Component {
         <div className="center_wrapper pricing_section">
           <h2>Pricing</h2>
 
-          <div className="pricing_wrapper" />
-          {this.showBoxes()}
+          <div className="pricing_wrapper">{this.showBoxes()}</div>
         </div>
       </div>
     );

@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
 //Utils
-import Button from "../../components/utils/buttons";
+import Button from "../utils/Buttons";
 
 class Discount extends Component {
   state = {
