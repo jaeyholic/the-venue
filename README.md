@@ -1,5 +1,7 @@
 # the-venue
+
 ##Setup and run
+
 ### install dependencies
 $ npm install # Or yarn install
 
